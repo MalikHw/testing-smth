@@ -7,14 +7,18 @@
         "ios": "2.2081"
     },
     "version": "1.0.0",
-    "id": "MalikHw.testing-smth",
-    "name": "testing-smth",
-    "developer": "MalikHw",
-    "description": "desc.",
-    "tags": ["yes", "yeah"],
+    "id": "malikhw47.hwgdreqs",
+    "name": "HwGDReqs",
+    "developer": "MalikHw47",
+    "description": "level requests system for twitch i guess",
+    "tags": ["utilty", "online"],
     "links": {
         "source": "https://github.com/MalikHw/testing-smth",
         "community": "https://discord.gg/G9bZ92eg2n"
     },
-    "settings": {}
+    "resources": {
+        "font": {
+            "path": "resources/arial.ttf"
+        }
+    }
 }

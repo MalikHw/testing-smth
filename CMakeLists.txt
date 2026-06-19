@@ -8,9 +8,13 @@ else()
 endif()
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
-project(Template VERSION 1.0.0)
+project(HwGDReqs VERSION 1.0.0)
 
-# Add all source files inside src (recursively)
+
+if(MSVC)
+  add_compile_options(/FS)  
+endif()
+
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)
 
 # Set up the mod binary
@@ -27,3 +31,8 @@ add_subdirectory($ENV{GEODE_SDK} ${CMAKE_CURRENT_BINARY_DIR}/geode)
 
 # Set up dependencies, resources, and link Geode.
 setup_geode_mod(${PROJECT_NAME})
+
+# Add gd-imgui-cocos dependency via CPM
+CPMAddPackage("gh:matcool/gd-imgui-cocos#b93f08c")
+
+target_link_libraries(${PROJECT_NAME} imgui-cocos)
